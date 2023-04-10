@@ -1,9 +1,11 @@
-import './styles.css'
+import "./styles.css";
 
-const Content = () =>{
-    return (
-        <p>açlsdkfjçasldfkj</p>
-    )
-}
+const Content = () => {
+  return (
+    <div className="contentScreen">
+      <p>açlsdkfjçasldfkj</p>
+    </div>
+  );
+};
 
-export default Content
+export default Content;
