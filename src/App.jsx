@@ -3,8 +3,8 @@ import { ThemeContext, ThemeProvider } from "./context/theme/themeContext";
 import { themeData } from "./context/theme/values";
 import { useContext } from "react";
 import { GeralContext } from "./context/geral/geralContext";
-import Content from "./screens/content";
-import Leftbar from "./screens/Leftbar";
+import Content from "./screens/Content";
+import Leftbar from "./screens/LeftBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,12 +19,12 @@ function App() {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <div class="flex" style={{height: '100vh'}}>
+      <div class="flex min-h-screen">
         {/* <p>açsdklfj</p> */}
-        <div class="w-1/4" style={{backgroundColor:currentTheme.primary}}>
+        <div class="w-1/3 sm:block hidden" style={{backgroundColor:currentTheme.primary}}>
           <Leftbar />
         </div>
-        <div class="w-3/4 h-auto"style={{backgroundColor:currentTheme.contentPrimary}}>
+        <div class="w-full "style={{backgroundColor:currentTheme.contentPrimary}}>
           <Content />
         </div>
       </div>
