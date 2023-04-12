@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ThemeProvider } from "./context/theme/themeContext";
+import { ThemeContext, ThemeProvider } from "./context/theme/themeContext";
 import { themeData } from "./context/theme/values";
 import { useContext } from "react";
 import { GeralContext } from "./context/geral/geralContext";
@@ -8,19 +8,23 @@ import Leftbar from "./screens/Leftbar";
 
 function App() {
   const [count, setCount] = useState(0);
-  const {isDarkMode}= useContext(GeralContext);
+  const { isDarkMode } = useContext(GeralContext);
   // const isDarkMode = context.isDarkMode
   // console.log('aqui',isDarkMode.isDarkMode)
-  console.log('aquis', isDarkMode)
+  console.log("aquis", isDarkMode);
+
+  let currentTheme;
+  if (isDarkMode) currentTheme = themeData.dark;
+  else currentTheme = themeData.light;
 
   return (
-    <ThemeProvider theme={isDarkMode?themeData.dark:themeData.light}>
-      <div class="flex">
+    <ThemeProvider theme={currentTheme}>
+      <div class="flex" style={{height: '100vh'}}>
         {/* <p>açsdklfj</p> */}
-        <div class="w-1/4 bg-zinc-800">
+        <div class="w-1/4" style={{backgroundColor:currentTheme.primary}}>
           <Leftbar />
         </div>
-        <div class="w-3/4 border-amber-600 border-2">
+        <div class="w-3/4 h-auto"style={{backgroundColor:currentTheme.contentPrimary}}>
           <Content />
         </div>
       </div>

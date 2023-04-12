@@ -1,8 +1,7 @@
-import "./styles.css";
 
 const Content = () => {
   return (
-    <div className="contentScreen">
+    <div className="border-2 border-black">
       <p>açlsdkfjçasldfkj</p>
     </div>
   );
