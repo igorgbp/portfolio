@@ -19,12 +19,17 @@ function App() {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <div class="flex min-h-screen">
-        {/* <p>açsdklfj</p> */}
-        <div class="w-1/3 sm:block hidden" style={{backgroundColor:currentTheme.primary}}>
-          <Leftbar />
+      <div class="flex min-h-screen overflow-x-hidden ">
+        <div
+          class="w-1/3 sm:block hidden  "
+          style={{ backgroundColor: currentTheme.primary }}
+        >
+          <Leftbar class="" />
         </div>
-        <div class="w-full "style={{backgroundColor:currentTheme.contentPrimary}}>
+        <div
+          class="w-full"
+          style={{ backgroundColor: currentTheme.contentPrimary }}
+        >
           <Content />
         </div>
       </div>

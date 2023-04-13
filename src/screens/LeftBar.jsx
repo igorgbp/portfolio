@@ -25,8 +25,8 @@ const Leftbar = () => {
     },
     {
       id: 2,
-      name: "Portifolio",
-      icon: "portifolio",
+      name: "Portfolio",
+      icon: "portfolio",
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ const Leftbar = () => {
     switch (item.icon) {
       case "user":
         return <FaUserAlt color={currentTheme.text} />;
-      case "portifolio":
+      case "portfolio":
         return <FiPaperclip color={currentTheme.text} />;
       case "contact":
         return <MdContacts color={currentTheme.text} />;
@@ -89,7 +89,7 @@ const Leftbar = () => {
       />
       <p class="mx-2 text-center mt-2" style={{ color: currentTheme.text }}>
         Olá meu nome é Igor, sou desenvolvedor front end. Bem vindo ao meu
-        portifólio
+        portfolio
       </p>
       {/* <hr class="mt-2 w-full" style={{ borderColor: currentTheme.text }}></hr> */}
       <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
@@ -115,7 +115,7 @@ const Leftbar = () => {
                 isDarkMode ? "bg-gray-300" : "bg-gray-600"
               } mb-1 rounded-md py-3 px-4 mx-auto w-full ${
                 isDarkMode ? "hover:bg-slate-400" : "hover:bg-slate-500"
-              }  space-x-3 justify-center hover:cursor-pointer`}
+              }  space-x-3 justify-start hover:cursor-pointer`}
               onClick={() => setCurrentOption(item.id)}
             >
               <Icon item={item} />
@@ -134,7 +134,7 @@ const Leftbar = () => {
           } border-4 border-gray-700 appearance-none cursor-pointer`}
         />
         <p style={{ color: currentTheme.text }} class="font-semibold">
-          Dark mode
+          {isDarkMode?'Dark':'Light'} mode
         </p>
       </div>
     </div>
