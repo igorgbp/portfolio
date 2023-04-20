@@ -20,17 +20,18 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <div class="flex min-h-screen overflow-x-hidden ">
-        <div
-          class="w-1/3 sm:block hidden  "
-          style={{ backgroundColor: currentTheme.primary }}
+        <aside
+          class="fixed w-80  transition-transform -translate-x-full md:translate-x-0"
+          aria-label="Sidebar"
         >
-          <Leftbar class="" />
-        </div>
-        <div
-          class="w-full"
-          style={{ backgroundColor: currentTheme.contentPrimary }}
-        >
-          <Content />
+          <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" style={{backgroundColor:currentTheme.primary}}>
+            <Leftbar class="" />
+          </div>
+        </aside>
+        <div class=" md:ml-80">
+          <div class="p-4  border-gray-200  dark:border-gray-700"style={{backgroundColor:currentTheme.contentPrimary}}>
+            <Content />
+          </div>
         </div>
       </div>
     </ThemeProvider>

@@ -92,7 +92,7 @@ const Leftbar = () => {
         portfolio
       </p>
       {/* <hr class="mt-2 w-full" style={{ borderColor: currentTheme.text }}></hr> */}
-      <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
+                <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
         {links.map((link) => {
           return (
             <li
@@ -130,7 +130,7 @@ const Leftbar = () => {
           checked={isDarkMode}
           onChange={updateDarkMode}
           className={`toggle-checkbox   w-6 h-6 rounded-full ${
-            isDarkMode ? "bg-gray-400" : "bg-gray-800"
+            isDarkMode ? "bg-gray-400 hover:bg-gray-800" : "bg-gray-800 hover:bg-gray-400"
           } border-4 border-gray-700 appearance-none cursor-pointer`}
         />
         <p style={{ color: currentTheme.text }} class="font-semibold">

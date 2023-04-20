@@ -12,8 +12,8 @@ const Portifolio = () => {
   const projs = [
     {
       name: "Reminder",
-      pic: '../../assets/clube1.png',
-      link: Image,
+      pic: Image,
+      link: 'açslkdfj',
       tec: "Javascript, React Native e Firebase",
       description:
         "Foi o primeiro projeto que desenvolvi em Javascript, e consequentemente o primerio em React Native, me ajudou muito a entender alguns conceitos e a me familiarizar com npm, componentização, hooks, e muito mais. Utilizei o firebase como banco para o projeto.",
@@ -46,7 +46,7 @@ const Portifolio = () => {
           {item.name}
         </p>
         <p style={{ color: theme.textSecondary }}> {item.description}</p>
-        <img src={item.link} class="h-96 w-full object-cover rounded-lg mt-2"></img>
+        <img src={item.pic} class="h-96 w-full object-cover rounded-lg mt-2"></img>
         <p class="mt-2" style={{ color: theme.textSecondary }}>
           Tecnologias utilizadas:{" "}
           <span class="" style={{ color: theme.text }}>
