@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider theme={currentTheme}>
       <div class="flex min-h-screen overflow-x-hidden ">
         <aside
-          class="fixed w-80  transition-transform -translate-x-full md:translate-x-0"
+          class="fixed w-80  h-full transition-transform -translate-x-full md:translate-x-0"
           aria-label="Sidebar"
         >
           <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" style={{backgroundColor:currentTheme.primary}}>
