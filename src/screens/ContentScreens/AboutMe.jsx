@@ -7,46 +7,46 @@ import { MdContacts } from "react-icons/md";
 import { FiPaperclip } from "react-icons/fi";
 import { GeralContext } from "../../context/geral/geralContext";
 import Icon from "../../components/Icon";
-import flutuante from "../../assets/segunda.png"
+import flutuante from "../../assets/segunda.png";
 
 const AboutMe = () => {
   const { setCurrentOption, skills } = useContext(GeralContext);
   const theme = useContext(ThemeContext);
   console.log(theme);
-  
+
   const Item = ({ item }) => {
     return (
-      <div class="w-72  rounded-md   flex flex-col p-4  mt-4">
-        <Icon item={item} />
-        <p class="mt-2 text-lg font-bold" style={{ color: theme.text }}>
+      <div class="w-72  rounded-md   flex flex-col p-4  md:mt-4 items-center md:items-start">
+        <div class=" w-fit"><Icon item={item} /></div>
+        <p class="mt-2 text-lg font-bold text-center md:text-start" style={{ color: theme.text }}>
           {item.name}
         </p>
-        <p style={{ color: theme.textSecondary }}>{item.description}</p>
+        <p class="text-center md:text-start" style={{ color: theme.textSecondary }}>{item.description}</p>
       </div>
     );
   };
   return (
-    <div class=" flex flex-col">
+    <div class=" flex flex-col  lg:pr-24">
       <div class="flex space-x-6 ">
         <div class="h-auto  flex flex-col">
           <div class=" mb-4">
-            <p class="text-5xl font-black" style={{ color: theme.text }}>
+            <p class=" text-3xl md:text-5xl font-black mx-auto md:mx-0 w-fit" style={{ color: theme.text }}>
               Igor Pereira
             </p>
             <p
-              class="text-2xl font-bold mt-1"
+              class=" text-xl md:text-2xl font-bold mt-1 mx-auto md:mx-0 w-fit"
               style={{ color: theme.textSecondary }}
             >
               Desenvolvedor Front-end
             </p>
-            <p class="mt-4" style={{ color: theme.textSecondary }}>
+            <p class="mt-4 mx-auto md:mx-0 w-fit text-center md:text-start" style={{ color: theme.textSecondary }}>
               Sou um desenvolvedor front end para aplicações web e mobile. Quer
               saber como posso ajudar seu projeto? Confira meu portfólio de
               projetos e currículo online.
             </p>
           </div>
 
-          <div class="flex space-x-4 ">
+          <div class="flex gap-2 flex-wrap justify-center md:justify-start ">
             <button
               class="p-2  rounded-lg w-44 bg-slate-600 hover:bg-gray-700  hover:font-bold flex items-center justify-center"
               onClick={() => setCurrentOption(2)}
@@ -67,30 +67,31 @@ const AboutMe = () => {
               </p>
             </button>
           </div>
-          <div class="mt-20">
-        <p class="text-3xl font-bold" style={{ color: theme.text }}>
-          O que eu faço?
-        </p>
-        <p class="mt-2" style={{ color: theme.textSecondary }}>
-          Desenvolvo em javascript há quase dois anos, atualmente atuo na "Preço
-          do Gás LTDA" como desenvolvedor front end mobile, usando React Native.
-          Abaixo tem um pequeno resumo das tecnologias em que tenho experiência.
-        </p>
-      </div>
+          <div class="mt-8 md:mt-20">
+            <p class="text-xl md:text-3xl font-bold mx-auto md:mx-0 w-fit" style={{ color: theme.text }}>
+              O que eu faço?
+            </p>
+            <p class="mt-2 text-center md:text-start" style={{ color: theme.textSecondary }}>
+              Desenvolvo em javascript há quase dois anos, atualmente atuo na
+              "Preço do Gás LTDA" como desenvolvedor front end mobile, usando
+              React Native. Abaixo tem um pequeno resumo das tecnologias em que
+              tenho experiência.
+            </p>
+          </div>
         </div>
         <img
           src={flutuante}
           class="w-11/12 object-contain h-96 lg:block hidden"
         />
       </div>
-      
+
       {/* <div class="flex space-x-4 mt-4 border-2 border-blue-600 flex-wrap h-full justify-center p-5">
         {skills.map((item) => {
           return <Item item={item} />
         })}
       </div> */}
-      <div class="mt-5">
-        <ul class=" flex flex-wrap  h-full justify-start gap-2">
+      <div class=" mt-5">
+        <ul class=" flex flex-wrap  h-full justify-center md:justify-start gap-2">
           {skills.map((item) => {
             return (
               <li >

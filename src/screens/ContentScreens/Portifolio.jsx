@@ -39,13 +39,13 @@ const Portifolio = () => {
   const Item = ({ item }) => {
     return (
       <div
-        class=" mb-4 p-7 rounded-xl"
+        class=" mb-4 md:p-7 p-4 rounded-xl"
         style={{ backgroundColor: theme.secondary }}
       >
-        <p class=" text-xl " style={{ color: theme.text }}>
+        <p class=" text-xl text-center md:text-start" style={{ color: theme.text }}>
           {item.name}
         </p>
-        <p style={{ color: theme.textSecondary }}> {item.description}</p>
+        <p class="text-center md:text-start" style={{ color: theme.textSecondary }}> {item.description}</p>
         <img src={item.pic} class="h-96 w-full object-cover rounded-lg mt-2"></img>
         <p class="mt-2" style={{ color: theme.textSecondary }}>
           Tecnologias utilizadas:{" "}
@@ -69,11 +69,11 @@ const Portifolio = () => {
   }; 
   return (
     <div class=" flex items-center flex-col">
-      <div class="w-2/3  ">
-        <p class="text-center text-5xl font-bold" style={{ color: theme.text }}>
+      <div class="px-4 md:px-0">
+        <p class="text-center md:text-start text-3xl md:text-5xl font-bold" style={{ color: theme.text }}>
           Portfólio
         </p>
-        <p class="text-center mt-2" style={{ color: theme.textSecondary }}>
+        <p class="text-center md:text-start mt-2" style={{ color: theme.textSecondary }}>
           Bem vindo ao meu portifólio online, aqui você encontra alguns dos meus
           projetos pessoais. Quer ajuda construindo sua aplicação?
         </p>

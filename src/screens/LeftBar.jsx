@@ -1,22 +1,49 @@
 import user from "../assets/igo.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GeralContext } from "../context/geral/geralContext";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineLinkedin,
+  AiFillCaretLeft,
 } from "react-icons/ai";
-
+import {TbArrowBarLeft} from 'react-icons/tb';
 import { FaUserAlt } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
 import { FiPaperclip } from "react-icons/fi";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { ThemeContext } from "../context/theme/themeContext";
 
 const Leftbar = () => {
-  const { updateDarkMode, isDarkMode, setCurrentOption } =
-    useContext(GeralContext);
+  const {
+    updateDarkMode,
+    isDarkMode,
+    setCurrentOption,
+    isShowingLeftBar,
+    updateIsShowingLeftBar,
+  } = useContext(GeralContext);
+  const [width, setWidth] = useState(window.innerWidth);
   const currentTheme = useContext(ThemeContext);
-
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+  window.addEventListener("resize", handleResize);
+  const HideLeftBar = () => {
+    if (width < 768) {
+      return (
+        <button
+          class="absolute right-2 top-1/2"
+          onClick={() => updateIsShowingLeftBar()}
+        >
+          <AiFillCaretLeft size={30}  className=" text-gray-500 hover:text-slate-700"/>
+          
+        </button>
+      );
+    }else return null
+  } 
+  const handleShowLeftBarOnOptionClick = () =>{
+    if(window.innerWidth<768) updateIsShowingLeftBar()
+  }
   const options = [
     {
       id: 1,
@@ -75,13 +102,14 @@ const Leftbar = () => {
   };
 
   return (
-    <div class=" justify-center p-3 ">
-      <p
+    <div class=" justify-center px-3 py-6 items-center">
+      <HideLeftBar />
+      {/* <p
         class="text-center text-xl mt-2 font-bold"
         style={{ color: currentTheme.text }}
       >
         Igor Pereira
-      </p>
+      </p> */}
       <img
         src={user}
         alt="Igor Pereira"
@@ -92,7 +120,7 @@ const Leftbar = () => {
         portfolio
       </p>
       {/* <hr class="mt-2 w-full" style={{ borderColor: currentTheme.text }}></hr> */}
-                <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
+      <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
         {links.map((link) => {
           return (
             <li
@@ -107,7 +135,7 @@ const Leftbar = () => {
           );
         })}
       </ul>
-      <div class=" mt-2">
+      <div class=" mt-2 ">
         {options.map((item) => {
           return (
             <button
@@ -116,7 +144,7 @@ const Leftbar = () => {
               } mb-1 rounded-md py-3 px-4 mx-auto w-full ${
                 isDarkMode ? "hover:bg-slate-400" : "hover:bg-slate-500"
               }  space-x-3 justify-start hover:cursor-pointer`}
-              onClick={() => setCurrentOption(item.id)}
+              onClick={() => {setCurrentOption(item.id);handleShowLeftBarOnOptionClick()}}
             >
               <Icon item={item} />
               <p style={{ color: currentTheme.text }}>{item.name}</p>
@@ -124,19 +152,25 @@ const Leftbar = () => {
           );
         })}
       </div>
-      <div class="flex space-x-1 mx-auto mt-4 justify-center">
-        <input
-          type="checkbox"
-          checked={isDarkMode}
-          onChange={updateDarkMode}
-          className={`toggle-checkbox   w-6 h-6 rounded-full ${
-            isDarkMode ? "bg-gray-400 hover:bg-gray-800" : "bg-gray-800 hover:bg-gray-400"
-          } border-4 border-gray-700 appearance-none cursor-pointer`}
-        />
+
+      <button
+        onClick={() => updateDarkMode()}
+        class={`flex space-x-1 mx-auto  mt-4 justify-center w-fit px-2 py-1 items-center rounded-md ${
+          isDarkMode
+            ? "bg-gray-300 hover:bg-slate-400"
+            : "bg-gray-700 hover:bg-slate-600"
+        }`}
+      >
+        {isDarkMode ? (
+          <BsMoonFill color={currentTheme.text} />
+        ) : (
+          <BsSunFill color={currentTheme.text} />
+        )}
+
         <p style={{ color: currentTheme.text }} class="font-semibold">
-          {isDarkMode?'Dark':'Light'} mode
+          {isDarkMode ? "Dark" : "Light"} mode
         </p>
-      </div>
+      </button>
     </div>
   );
 };

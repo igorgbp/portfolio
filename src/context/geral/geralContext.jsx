@@ -4,11 +4,15 @@ export const GeralContext = createContext();
 
 export const GeralProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [currentOption, setCurrentOption] = useState(1)
+  const [currentOption, setCurrentOption] = useState(1);
+  const [isShowingLeftBar, setIsShowingLeftBar] = useState(true)
 
   const updateDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+  const updateIsShowingLeftBar = () =>{
+    setIsShowingLeftBar(!isShowingLeftBar)
+  }
   const skills = [
     {
       name: "Javascript",
@@ -54,7 +58,7 @@ export const GeralProvider = ({ children }) => {
   ];
 
   return (
-    <GeralContext.Provider value={{ isDarkMode, updateDarkMode, currentOption, setCurrentOption, skills }}>
+    <GeralContext.Provider value={{ isDarkMode, updateDarkMode, currentOption, setCurrentOption, isShowingLeftBar, updateIsShowingLeftBar,skills }}>
       {children}
     </GeralContext.Provider>
   );

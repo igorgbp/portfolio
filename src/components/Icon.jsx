@@ -16,7 +16,7 @@ export default function Icon({item}){
         case "Tailwind":
           return <SiTailwindcss class="w-14 h-14" color="#33b3c4" />;
         case "React Native":
-          return <SiReactquery class="w-14 h-14" color="#4fd1e2" />;
+          return <FaReact class="w-14 h-14" color="#4fd1e2" />;
         case "Javascript":
           return <SiJavascript class="w-14 h-14" color="#d1b310" />;
           case "Typescript":

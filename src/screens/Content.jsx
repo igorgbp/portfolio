@@ -9,7 +9,7 @@ const Content = () => {
   console.log('current e tals',currentOption);
 
   return (
-    <div class="p-10">
+    <div class="py-10">
      { currentOption == 1 && <AboutMe/>}
      { currentOption == 2 && <Portifolio/>}
      { currentOption == 3 && <Contact/>}
