@@ -4,6 +4,7 @@ import { ThemeContext } from "../../context/theme/themeContext";
 import Image from "../../assets/igor.png";
 import Clube from '../../assets/clube2.png'
 import { GeralContext } from "../../context/geral/geralContext";
+import {RiGitRepositoryFill} from 'react-icons/ri'
 
 const Portifolio = () => {
   const { isDarkMode } = useContext(GeralContext);
@@ -21,7 +22,7 @@ const Portifolio = () => {
     {
       name: "Quiz",
       pic: '../../assets/clube1.png',
-      link: Clube,
+      link: "https://github.com/igorgbp/Clube-do-Livro",
       tec: "Javascript e React",
       description:
         "Projeto desenvolvido para um trabalho da faculdade, que consistiu em entender conceitos sobre React.",
@@ -47,23 +48,31 @@ const Portifolio = () => {
         </p>
         <p class="text-center md:text-start" style={{ color: theme.textSecondary }}> {item.description}</p>
         <img src={item.pic} class="h-96 w-full object-cover rounded-lg mt-2"></img>
-        <p class="mt-2" style={{ color: theme.textSecondary }}>
-          Tecnologias utilizadas:{" "}
-          <span class="" style={{ color: theme.text }}>
-            {item.tec}
-          </span>
+        <p class="mt-2 md:text-start text-center" style={{ color: theme.textSecondary }}>
+        {item.tec}
         </p>
-        <p style={{ color: theme.textSecondary }}>
-          Repositório:{" "}
+        <div className="flex flex-row items-center gap-2 w-fit md:mx-0 mx-auto">
+          <RiGitRepositoryFill size={20} color={theme.textSecondary}/>
           <a
             href={item.link}
             class={` ${
-              isDarkMode ? "text-slate-700 hover:text-slate-500" : "text-gray-50 hover:text-gray-400"
+              isDarkMode ?  "text-gray-50 hover:text-gray-400":"text-blue-950 hover:text-slate-500"
             } `}
           >
-            {item.link}
+            Respositório
           </a>
-        </p>
+        </div>
+        <div className="flex flex-row items-center gap-2 w-fit md:mx-0 mx-auto">
+          <RiGitRepositoryFill size={20} color={theme.textSecondary}/>
+          <a
+            href={item.link}
+            class={` ${
+              isDarkMode ?  "text-gray-50 hover:text-gray-400":"text-blue-950 hover:text-slate-500"
+            } `}
+          >
+            Respositório
+          </a>
+        </div>
       </div>
     );
   }; 

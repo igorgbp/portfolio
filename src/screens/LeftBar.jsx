@@ -1,4 +1,4 @@
-import user from "../assets/igo.jpg";
+import user from "../assets/igorpic.png";
 import { useContext, useState } from "react";
 import { GeralContext } from "../context/geral/geralContext";
 import {
@@ -135,19 +135,20 @@ const Leftbar = () => {
           );
         })}
       </ul>
-      <div class=" mt-2 ">
+      <div class="py-3 ">
         {options.map((item) => {
           return (
             <button
-              className={`flex items-center ${
-                isDarkMode ? "bg-gray-300" : "bg-gray-600"
-              } mb-1 rounded-md py-3 px-4 mx-auto w-full ${
-                isDarkMode ? "hover:bg-slate-400" : "hover:bg-slate-500"
-              }  space-x-3 justify-start hover:cursor-pointer`}
+              // className={`flex items-center ${
+              //   isDarkMode ? "bg-gray-300" : "bg-gray-600"
+              // } mb-1 rounded-md py-3 px-4 mx-auto w-full ${
+              //   isDarkMode ? "hover:bg-slate-400" : "hover:bg-slate-500"
+              // }  space-x-3 justify-start hover:cursor-pointer`}
+              className="flex mx-auto items-center hover:font-bold  mb-2 gap-2 justify-center hover:cursor-pointer w-fit"
               onClick={() => {setCurrentOption(item.id);handleShowLeftBarOnOptionClick()}}
             >
               <Icon item={item} />
-              <p style={{ color: currentTheme.text }}>{item.name}</p>
+              <p className="hover:text-xl text-lg" style={{ color: currentTheme.text }}>{item.name}</p>
             </button>
           );
         })}
@@ -155,20 +156,20 @@ const Leftbar = () => {
 
       <button
         onClick={() => updateDarkMode()}
-        class={`flex space-x-1 mx-auto  mt-4 justify-center w-fit px-2 py-1 items-center rounded-md ${
+        class={`flex space-x-1 mx-auto  justify-center w-fit px-2 py-1 items-center rounded-md ${
           isDarkMode
-            ? "bg-gray-300 hover:bg-slate-400"
-            : "bg-gray-700 hover:bg-slate-600"
+            ? "bg-gray-700 hover:bg-slate-600"
+            : "bg-gray-300 hover:bg-slate-400"
         }`}
       >
         {isDarkMode ? (
-          <BsMoonFill color={currentTheme.text} />
+          <BsSunFill color={'#ffd16e'}  />
         ) : (
-          <BsSunFill color={currentTheme.text} />
+          <BsMoonFill color={'#524f88'} />
         )}
 
         <p style={{ color: currentTheme.text }} class="font-semibold">
-          {isDarkMode ? "Dark" : "Light"} mode
+          {isDarkMode ? "Light" : "Dark"} mode
         </p>
       </button>
     </div>

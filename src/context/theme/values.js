@@ -1,13 +1,13 @@
 export const themeData = {
-  light: {
+  dark: {
     primary: '#24293B',
-    secondary: '#454f56',
+    secondary: '#3a3b48',
     text: '#FFF',
     textSecondary: '#cfcfcf',
     contentPrimary: '#434556'
 
   },
-  dark: {
+  light: {
     primary: '#ebebeb',
     secondary: '#c0cdd7',
     text: '#2a2a2a',

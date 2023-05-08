@@ -16,7 +16,7 @@ const AboutMe = () => {
 
   const Item = ({ item }) => {
     return (
-      <div class="w-72  rounded-md   flex flex-col p-4  md:mt-4 items-center md:items-start">
+      <div class=" w-full md:w-72  rounded-md   flex flex-col p-4  md:mt-4 items-center md:items-start">
         <div class=" w-fit"><Icon item={item} /></div>
         <p class="mt-2 text-lg font-bold text-center md:text-start" style={{ color: theme.text }}>
           {item.name}
@@ -48,8 +48,9 @@ const AboutMe = () => {
 
           <div class="flex gap-2 flex-wrap justify-center md:justify-start ">
             <button
-              class="p-2  rounded-lg w-44 bg-slate-600 hover:bg-gray-700  hover:font-bold flex items-center justify-center"
+              class="p-2  rounded-lg w-44   hover:font-bold flex items-center justify-center"
               onClick={() => setCurrentOption(2)}
+              style={{backgroundColor: theme.secondary}}
             >
               <FiPaperclip color={"white"} />
               <p class="ml-2" style={{ color: "#FFF" }}>
@@ -57,8 +58,10 @@ const AboutMe = () => {
               </p>
             </button>
             <button
-              class="p-2  rounded-lg w-44 bg-slate-600 hover:bg-gray-700  hover:font-bold flex items-center justify-center"
+              class="p-2  rounded-lg w-44   hover:font-bold flex items-center justify-center"
               onClick={() => setCurrentOption(3)}
+              style={{backgroundColor: theme.secondary}}
+
             >
               <MdContacts color={"white"} />
               <p class="ml-2" style={{ color: "#FFF" }}>
