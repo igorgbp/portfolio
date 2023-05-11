@@ -8,7 +8,7 @@ export const themeData = {
 
   },
   light: {
-    primary: '#ebebeb',
+    primary: '#e6e7f1',
     secondary: '#c0cdd7',
     text: '#2a2a2a',
     textSecondary: '#4b4b4b',

@@ -52,8 +52,8 @@ const AboutMe = () => {
               onClick={() => setCurrentOption(2)}
               style={{backgroundColor: theme.secondary}}
             >
-              <FiPaperclip color={"white"} />
-              <p class="ml-2" style={{ color: "#FFF" }}>
+              <FiPaperclip color={theme.text} />
+              <p class="ml-2" style={{color:theme.text}}>
                 Ver meu potfolio
               </p>
             </button>
@@ -63,8 +63,8 @@ const AboutMe = () => {
               style={{backgroundColor: theme.secondary}}
 
             >
-              <MdContacts color={"white"} />
-              <p class="ml-2" style={{ color: "#FFF" }}>
+              <MdContacts color={theme.text} />
+              <p class="ml-2" style={{ color: theme.text }}>
                 {" "}
                 Entrar em contato
               </p>
