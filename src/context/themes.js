@@ -1,4 +1,4 @@
-export const themeData = {
+export const themes = {
   dark: {
     primary: '#24293B',
     secondary: '#3a3b48',

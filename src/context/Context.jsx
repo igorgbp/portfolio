@@ -1,17 +1,23 @@
 import React, { createContext, useState } from 'react';
+import { themes } from './themes';
 
-export const GeralContext = createContext();
+export const Context = createContext();
 
-export const GeralProvider = ({ children }) => {
+export const ContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentOption, setCurrentOption] = useState(1);
   const [isShowingLeftBar, setIsShowingLeftBar] = useState(true)
+  const [theme, setTheme] = useState(themes.dark);
 
   const updateDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
   const updateIsShowingLeftBar = () =>{
     setIsShowingLeftBar(!isShowingLeftBar)
+  }
+  const changeTheme = () => {
+    if(theme == themes.dark) setTheme(themes.light)
+      else setTheme(themes.dark)
   }
   const skills = [
     {
@@ -58,8 +64,8 @@ export const GeralProvider = ({ children }) => {
   ];
 
   return (
-    <GeralContext.Provider value={{ isDarkMode, updateDarkMode, currentOption, setCurrentOption, isShowingLeftBar, updateIsShowingLeftBar,skills }}>
+    <Context.Provider value={{ isDarkMode, updateDarkMode, currentOption, setCurrentOption, isShowingLeftBar, updateIsShowingLeftBar,skills, theme, changeTheme}}>
       {children}
-    </GeralContext.Provider>
+    </Context.Provider>
   );
 };

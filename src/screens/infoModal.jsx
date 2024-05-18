@@ -1,6 +1,5 @@
 import user from "../assets/igorpic.png";
 import { useContext, useState } from "react";
-import { GeralContext } from "../context/geral/geralContext";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
@@ -12,18 +11,20 @@ import { FaUserAlt } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
 import { FiPaperclip } from "react-icons/fi";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
-import { ThemeContext } from "../context/theme/themeContext";
+import { Context } from "../context/Context";
 
 const Leftbar = () => {
   const {
     updateDarkMode,
+    changeTheme,
     isDarkMode,
     setCurrentOption,
     isShowingLeftBar,
     updateIsShowingLeftBar,
-  } = useContext(GeralContext);
+    theme
+  } = useContext(Context);
   const [width, setWidth] = useState(window.innerWidth);
-  const currentTheme = useContext(ThemeContext);
+  const currentTheme = theme
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
@@ -155,7 +156,7 @@ const Leftbar = () => {
       </div>
 
       <button
-        onClick={() => updateDarkMode()}
+        onClick={() => changeTheme()}
         class={`flex space-x-1 mx-auto  justify-center w-fit px-2 py-1 items-center rounded-md ${
           isDarkMode
             ? "bg-gray-700 hover:bg-slate-600"
