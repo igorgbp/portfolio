@@ -53,7 +53,7 @@ const InfoModal = () => {
       />
       <p class="mx-2 text-center mt-2" style={{ color: theme.text }}>
         Olá meu nome é Igor, sou desenvolvedor mobile. Bem vindo ao meu
-        portfolio
+        portfólio
       </p>
       {/* <hr class="mt-2 w-full" style={{ borderColor: theme.text }}></hr> */}
       <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
