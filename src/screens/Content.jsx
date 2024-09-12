@@ -108,10 +108,10 @@ const Content = () => {
           {t("pdg_pt_1")} <span className="font-bold text-lg" style={{ color: theme.text }}>{t("1_milion")}</span>{t("pdg_pt_2")}
         </p>
         <p class="mt-2 text-center md:text-start text-md" style={{ color: currentTheme.textSecondary }}>
-          <span class="font-bold " style={{ color: currentTheme.text }}>{t("available_in")}</span>: <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://play.google.com/store/apps/details?id=br.com.precodogas&hl=pt_BR" target="_blank">Play store</a> e <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://apps.apple.com/br/app/pre%C3%A7o-do-g%C3%A1s/id1457067935" target="_blank">App Store</a>
+          <span class="font-bold " style={{ color: currentTheme.text }}>{t("available_in")}</span>: <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://play.google.com/store/apps/details?id=br.com.precodogas&hl=pt_BR" target="_blank">Play store</a> {t("eand")} <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://apps.apple.com/br/app/pre%C3%A7o-do-g%C3%A1s/id1457067935" target="_blank">App Store</a>
         </p>
         <p class="mt-2 text-center md:text-start text-md" style={{ color: currentTheme.textSecondary }}>
-          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}>{t("used_tech")}: </span>Flutter, Bloc e Firebase.
+          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}>{t("used_tech")}: </span>Flutter, Bloc {t("eand")} Firebase.
         </p>
 
         <div
@@ -140,7 +140,7 @@ const Content = () => {
           </span>: <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://drive.google.com/file/d/1JOa72ED-Stafx7Ns1x3cyNjtdSRZ_Ifn/view?usp=sharing" target="_blank">Drive</a>
         </p>
         <p class="mt-2 text-center md:text-start text-md" style={{ color: currentTheme.textSecondary }}>
-          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}>{t("used_tech")}: </span>Flutter, Flame Engine e Firebase.
+          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}>{t("used_tech")}: </span>Flutter, Flame Engine {t("eand")} Firebase.
         </p>
         <div
           className="xl:w-3/5 lg:w-3/4 w-full relative h-auto h-calc-w group mt-4" ref={ref2}>
@@ -166,7 +166,7 @@ const Content = () => {
           <span class="font-bold" style={{ color: currentTheme.text }}> {t("youtube_video")}   </span>: <a class="mt-2 text-center md:text-start text-md underline" style={{ color: currentTheme.link }} href="https://www.youtube.com/watch?v=hirUK43gZ2I" target="_blank">Youtube</a>
         </p>
         <p class="mt-2 text-center md:text-start text-md" style={{ color: currentTheme.textSecondary }}>
-          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}> {t("used_tech")}: </span>React Native e Firebase.
+          <span class="mt-2 text-center md:text-start text-md font-bold" style={{ color: theme.text }}> {t("used_tech")}: </span>React Native {t("eand")} Firebase.
         </p>
         <div
           className="xl:w-3/5 lg:w-3/4 w-full relative h-auto h-calc-w group mt-4" ref={ref3}>
