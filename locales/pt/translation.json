@@ -1,0 +1,18 @@
+{
+  "info_bar_text": "Olá meu nome é Igor, sou desenvolvedor mobile. Bem vindo ao meu portfólio",
+  "subtitle": "Desenvolvedor Mobile",
+  "about_me_text_1": "Sou desenvolvedor mobile, atualmente focado em Flutter. Sou formado em Sistemas de Informação pelo Instituto Federal de Minas Gerais onde tive o primeiro contato com programação no geral. Tenho quase três anos de experiência com desenvolvimento mobile, meus maiores projetos desenvolvi em flutter, que é a tecnologia que foco hoje em dia e a que mais me aprofundei, além disso tive um período de experiência com React Native.",
+  "about_me_text_2": "Usando flutter tenho experiência com Bloc, APIs de localização do google, além da integração com serviços do Firebase como Crashlytics, Push notifications e Firestore. Participei do desenvolvimento de ao menos 3 projetos usando Flutter, além dos projetos pessoais. Usando React Native tive experiências tanto com React Native cli quanto com Expo, onde também utilizei tecnologias como Firebase e Apis de localização do Google, além de Redux para gerenciamento de estado.",
+  "main_jobs": "Principais trabalhos",
+  "pdg_pt_1": "Meu principal trabalho até o momento foi na Preço do Gás, onde desenvolvi um aplicativo em que os clientes podem comprar gás de cozinha. Tenho muito orgulho desse trabalho, não apenas porque o desenvolvi do zero, escrevendo praticamente todas as linhas de código, mas também porque ele se tornou o principal ponto de acesso dos clientes à empresa, com mais de",
+  "1_milion": "1 milhão de downloads",
+  "pdg_pt_2": ". Além disso foi uma experiência e tanto desenvolver uma aplicação que é usando por tanta gente em todo o Brasil. Participei também do processo de deploy na App Store e na Play Store.",
+  "available_in": "Disponível em",
+  "used_tech": "Tecnologias utilizadas",
+  "planet_vortext": "lanet vortex é um game que venho desenvolvendo há algum tempo. Sempre quis desenvolver algum tipo de jogo, e quando soube de um motor gráfico no Flutter, fui pesquisar mais a fundo e comecei experimentar. Criei todos os assets do jogo no photoshop e usei audios livres de copyright que encontrei online. Atualmente o jogo tem uma versão de testes que foi distribuída para alguns poucos usuários. A partir disso, coletei informações e estou trabalhando em melhorias de layout, jogabilidade e desempenho para publicar uma versão oficial na Play Store.",
+  "beta_version": "Versão beta disponível em",
+  "procuraqui": "ProcurAqui é um projeto inicialmente pensado para um trabalho de conclusão de curso, foi realizado junto a um colega de faculdade. Posteriormente a ideia se desenvolveu como um empreendimento para além da universidade. Consistem em um aplicativo que foca em melhorar a busca por informação a cerca de profissionais, estabelecimentos e orgãos públicos, na cidade de São João Evangeslita. No aplicativo o usuário encontra uma lista de contatos com diversas informações como endereço, meios de contato, e avaliações. Além disso qualquer pessoa que tenha conta no aplicativo pode cadastrar seu próprio negócio, tendo informações sobre engajamento dos usuários e avaliações. Após a apresentação e aprovação do projeto na faculdade, iniciamos o desenvolvimento da versão final, o que se segue até o momento.",
+  "youtube_video": "Vídeo demonstrativo da primeira versão da aplicação disponível em",
+  "about_portfolio_1": "Desenvolvi este porfólio usando React e Tailwind",
+  "about_portfolio_2": "Além de programar, ás vezes faço algumas artes que podem ser conferidas em"
+}

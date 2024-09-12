@@ -2,6 +2,7 @@ import user from "../assets/igorpic2.png";
 import usert from "../assets/igorpic3.png";
 
 import { useContext, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
@@ -11,7 +12,8 @@ import {
 } from "react-icons/ai";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { Context } from "../context/Context";
-
+import  "../../il8n";
+import { MdTranslate } from "react-icons/md";
 const InfoModal = () => {
   const {
     changeTheme,
@@ -21,11 +23,18 @@ const InfoModal = () => {
     theme
   } = useContext(Context);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [language, setLanguage] = useState('en');
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
   window.addEventListener("resize", handleResize);
-  
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    console.log('change language ', lng)
+    setLanguage(lng)
+    i18n.changeLanguage(lng);
+  };
   return (
     <div class=" justify-center px-4 py-2 items-center rounded-3xl flex flex-col relative" style={{backgroundColor: theme.primary}}>
       {
@@ -38,22 +47,38 @@ const InfoModal = () => {
           className=" rounded-full w-12 h-12 p-0.5 absolute top-4 right-4 bg-black bg-opacity-40 transition ease-in-out hover:scale-110 group" 
         >
           {isDarkMode ? (
-            <BsSunFill color={'#ffd16e'} className="mx-auto  animate-spin-super-slow" size={24}/>
+            <BsSunFill  color={'#ffd16e'} className="mx-auto  animate-spin-super-slow" size={24}/>
           ) : (
-            <BsMoonFill color={'#afa9ff'} className="mx-auto animate-wiggle-slow " size={24} />
+            <BsSunFill  color={'#afa9ff'} className="mx-auto animate-wiggle-slow " size={24} />
           )}
 
         </button>
         )
       }
+      <div className="flex-col flex top-4 left-4 absolute items-center">
+
+    
+        <button
+          onClick={() => changeLanguage(language == 'pt' ? 'en': 'pt')}
+          className=" rounded-full w-12 h-12 p-0.5   bg-black bg-opacity-40 hover:scale-110 group" 
+        >
+          {isDarkMode ? (
+            <MdTranslate color={'#ffd16e'} className="mx-auto " size={24}/>
+          ) : (
+            <MdTranslate color={'#afa9ff'} className="mx-auto " size={24} />
+          )}
+
+        </button>
+        <p style={{color: theme.text }}>{language}</p>
+
+        </div>
       <img
         src={isDarkMode? user : usert}
         alt="Igor Pereira"
         class="mt-2 mx-auto rounded-3xl w-56 h-56 object-cover"
       />
       <p class="mx-2 text-center mt-2" style={{ color: theme.text }}>
-        Olá meu nome é Igor, sou desenvolvedor mobile. Bem vindo ao meu
-        portfólio
+        {t("info_bar_text")}
       </p>
       {/* <hr class="mt-2 w-full" style={{ borderColor: theme.text }}></hr> */}
       <ul class="flex mx-2 items-center mt-2 space-x-1 justify-center h-14">
